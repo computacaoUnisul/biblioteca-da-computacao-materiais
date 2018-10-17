@@ -1,3 +1,7 @@
+> [ENVIE SEUS MATERIAIS](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/1)
+
+<hr>
+
 <img src="https://snag.gy/842qLm.jpg"/>
 
 ## Materiais de Ciência da Computação

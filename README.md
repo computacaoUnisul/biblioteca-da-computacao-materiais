@@ -11,6 +11,9 @@ Base de materiais que serão cadastrados no processo de liberação da plataform
 
 Este repositório será removido posteriormente.
 
+### Algo ajudou? Deixa uma estrela no repositório.
+![Marque como STAR](https://i.snag.gy/mbwZtH.jpg)
+
 <hr>
 
 ## O que é a Biblioteca dos Cursos?
@@ -20,6 +23,5 @@ Uma plataforma que está sendo desenvolvida por acadêmicos de Ciência da Compu
 Atualmente há uma grande quantidade de informações geradas diariamente ao longo da formação de acadêmicos, porém grande parte delas não está sendo aproveitada de forma correta. A plataforma estará disponível para professores e acadêmicos.
 
 ## Como colaborar?
-
 
 Faça um fork e devolva as alterações ou abra issues.

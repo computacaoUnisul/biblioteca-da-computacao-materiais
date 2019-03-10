@@ -8,9 +8,9 @@ Materiais de Ciência da Computação
 
 > Utilize os materiais apenas para finalidade estudantil!
 
-- [Repositórios sugeridos](#reposit%C3%B3rios-sugeridos)
-- [Biblioteca dos Cursos](#biblioteca-dos-cursos)
-- [Como enviar materiais?](#como-enviar-materiais)
+- [Guia de contribuição](#guia-de-contribui%C3%A7%C3%A3o)
+  - [Dúvida sobre material](#d%C3%BAvida-sobre-material)
+  - [Solicitar conteúdo](#solicitar-conte%C3%BAdo)
 
 Algo ajudou? Deixa uma estrela no repositório.
 
@@ -43,6 +43,20 @@ Uma plataforma em desenvolvimento por acadêmicos de Ciência da Computação e 
 
 Atualmente há uma grande quantidade de informações geradas diariamente ao longo da formação de acadêmicos, porém grande parte delas não está sendo aproveitada de forma correta. A plataforma estará disponível para professores e acadêmicos.
 
-## Como enviar materiais?
+# Guia de contribuição
 
-Faça um fork e devolva as alterações ou abra issues.
+Utilize [esta issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/1) para contribuir de forma simplificada, caso não tenha experiência com ferramentas Git ou faça um fork e devolva as alterações abrindo uma MR (merge request).
+
+## Dúvida sobre material
+
+Abra uma issue com o seguinte corpo da mensagem:
+
+```
+Link do material: 
+----
+Dúvida:
+```
+
+## Solicitar conteúdo
+
+> Abra uma issue apenas 😁

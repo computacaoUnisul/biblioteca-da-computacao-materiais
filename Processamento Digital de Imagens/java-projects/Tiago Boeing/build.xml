@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="processamento-digital-de-imagens" default="all">
+  
+  
+  <property file="build.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.ane"/>
+    <include name="*.swc"/>
+    <include name="*.war"/>
+    <include name="*.zip"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Global Libraries -->
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <fileset dir="${javac2.home}">
+      <include name="javac2.jar"/>
+      <include name="jdom.jar"/>
+      <include name="asm-all*.jar"/>
+      <include name="forms-*.jar"/>
+    </fileset>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module processamento-digital-de-imagens -->
+  
+  <dirname property="module.processamento-digital-de-imagens.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.processamento-digital-de-imagens" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.processamento-digital-de-imagens" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.processamento-digital-de-imagens" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.processamento-digital-de-imagens" value="-encoding ISO-8859-1 -source 10 -target 10 ${compiler.args}"/>
+  
+  <property name="processamento-digital-de-imagens.output.dir" value="${module.processamento-digital-de-imagens.basedir}/bin"/>
+  <property name="processamento-digital-de-imagens.testoutput.dir" value="${module.processamento-digital-de-imagens.basedir}/bin"/>
+  
+  <path id="processamento-digital-de-imagens.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="processamento-digital-de-imagens.module.production.classpath">
+    <path refid="${module.jdk.classpath.processamento-digital-de-imagens}"/>
+    <pathelement location="${basedir}/lib/opencv-400.jar"/>
+  </path>
+  
+  <path id="processamento-digital-de-imagens.runtime.production.module.classpath">
+    <pathelement location="${processamento-digital-de-imagens.output.dir}"/>
+    <pathelement location="${basedir}/lib/opencv-400.jar"/>
+  </path>
+  
+  <path id="processamento-digital-de-imagens.module.classpath">
+    <pathelement location="${processamento-digital-de-imagens.output.dir}"/>
+    <path refid="${module.jdk.classpath.processamento-digital-de-imagens}"/>
+    <pathelement location="${basedir}/lib/opencv-400.jar"/>
+  </path>
+  
+  <path id="processamento-digital-de-imagens.runtime.module.classpath">
+    <pathelement location="${processamento-digital-de-imagens.output.dir}"/>
+    <pathelement location="${basedir}/lib/opencv-400.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.processamento-digital-de-imagens">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.processamento-digital-de-imagens">
+    <patternset refid="excluded.from.module.processamento-digital-de-imagens"/>
+  </patternset>
+  
+  <path id="processamento-digital-de-imagens.module.sourcepath">
+    <dirset dir="${module.processamento-digital-de-imagens.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.processamento-digital-de-imagens" depends="compile.module.processamento-digital-de-imagens.production,compile.module.processamento-digital-de-imagens.tests" description="Compile module processamento-digital-de-imagens"/>
+  
+  <target name="compile.module.processamento-digital-de-imagens.production" depends="register.custom.compilers" description="Compile module processamento-digital-de-imagens; production classes">
+    <mkdir dir="${processamento-digital-de-imagens.output.dir}"/>
+    <javac2 destdir="${processamento-digital-de-imagens.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.processamento-digital-de-imagens}/javac">
+      <compilerarg line="${compiler.args.processamento-digital-de-imagens}"/>
+      <bootclasspath refid="processamento-digital-de-imagens.module.bootclasspath"/>
+      <classpath refid="processamento-digital-de-imagens.module.production.classpath"/>
+      <src refid="processamento-digital-de-imagens.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.processamento-digital-de-imagens"/>
+    </javac2>
+    
+    <copy todir="${processamento-digital-de-imagens.output.dir}">
+      <fileset dir="${module.processamento-digital-de-imagens.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.processamento-digital-de-imagens.tests" depends="register.custom.compilers,compile.module.processamento-digital-de-imagens.production" description="compile module processamento-digital-de-imagens; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.processamento-digital-de-imagens" description="cleanup module">
+    <delete dir="${processamento-digital-de-imagens.output.dir}"/>
+    <delete dir="${processamento-digital-de-imagens.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.processamento-digital-de-imagens" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.processamento-digital-de-imagens" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.processamento-digital-de-imagens" value="${basedir}/out/artifacts/processamento_digital_de_imagens"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.processamento-digital-de-imagens.jar" value="${artifacts.temp.dir}/processamento-digital-de-imagens.jar"/>
+  </target>
+  
+  <target name="artifact.processamento-digital-de-imagens" depends="init.artifacts, compile.module.processamento-digital-de-imagens" description="Build &#39;processamento-digital-de-imagens&#39; artifact">
+    <property name="artifact.temp.output.processamento-digital-de-imagens" value="${artifacts.temp.dir}/processamento_digital_de_imagens"/>
+    <mkdir dir="${artifact.temp.output.processamento-digital-de-imagens}"/>
+    <jar destfile="${temp.jar.path.processamento-digital-de-imagens.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${processamento-digital-de-imagens.output.dir}"/>
+      <zipfileset file="${basedir}/lib/opencv-400.jar"/>
+    </jar>
+    <copy file="${temp.jar.path.processamento-digital-de-imagens.jar}" tofile="${artifact.temp.output.processamento-digital-de-imagens}/processamento-digital-de-imagens.jar"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.processamento-digital-de-imagens" description="Build all artifacts">
+    <mkdir dir="${artifact.output.processamento-digital-de-imagens}"/>
+    <copy todir="${artifact.output.processamento-digital-de-imagens}">
+      <fileset dir="${artifact.temp.output.processamento-digital-de-imagens}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>

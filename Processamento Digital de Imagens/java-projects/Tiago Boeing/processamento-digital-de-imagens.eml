@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="opencv-400.jar" scope="COMPILE">
+		<srcroot url="jar://C:/Program Files/opencv/build/java/opencv-400.jar!/"/>
+	</lib>
+</component>

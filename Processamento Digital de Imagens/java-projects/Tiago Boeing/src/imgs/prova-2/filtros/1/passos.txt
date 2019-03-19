@@ -1,0 +1,5 @@
+1 - original para tons de cinza com média ponderada (R: 10, G:90, B:0)
+2 - negativa
+3 - ruído 3x3
+4 - limiarizacao
+5 - segmentacao

@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <left>
+      <BorderPane nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER">
+         <left>
+            <HBox styleClass="sidebar" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER">
+                    <content>
+                      <AnchorPane>
+                           <children>
+                              <Accordion cacheShape="false" centerShape="false" prefHeight="638.0" prefWidth="266.0" scaleShape="false" style="-fx-background-color: #F0F0F7;">
+                                 <panes>
+                                    <TitledPane styleClass="sidebar" text="Tons de cinza">
+                                       <content>
+                                          <AnchorPane style="-fx-background-color: fff;">
+                                             <children>
+                                                <VBox layoutX="31.0" layoutY="32.0" prefHeight="231.0" prefWidth="193.0">
+                                                   <children>
+                                                      <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#tonsDeCinza" prefHeight="56.0" prefWidth="268.0" style="-fx-background-color: #5460ea;" text="Média aritmética" textFill="WHITE" />
+                                                      <VBox prefWidth="100.0">
+                                                         <children>
+                                                            <Label text="\%R">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="txtPercR" prefHeight="40.0" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefWidth="100.0">
+                                                         <children>
+                                                            <Label text="\%G">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="txtPercG" prefHeight="40.0" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefWidth="100.0">
+                                                         <children>
+                                                            <Label text="\%B">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="txtPercB" prefHeight="40.0" />
+                                                         </children>
+                                                      </VBox>
+                                                      <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#tonsDeCinzaPonderada" prefHeight="54.0" prefWidth="247.0" style="-fx-background-color: #5460ea;" text="Média ponderada" textFill="WHITE">
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Limiarização">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Slider fx:id="slider" blockIncrement="5.0" max="255.0" prefHeight="64.0" prefWidth="239.0" showTickMarks="true" value="126.0" />
+                                                <Button contentDisplay="CENTER" defaultButton="true" layoutY="78.0" mnemonicParsing="false" onAction="#limiarizacao" prefHeight="54.0" prefWidth="239.0" style="-fx-background-color: #5460ea;" text="Aplicar limiarização" textFill="WHITE" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Negativa">
+                                       <content>
+                                          <VBox>
+                                             <children>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#negativa" prefHeight="47.0" prefWidth="224.0" style="-fx-background-color: #5460ea;" text="CONVERTER" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Redução de ruído (Denoiser) e obter cor">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label prefHeight="47.0" prefWidth="176.0" text="*Funciona apenas na Imagem 1">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <VBox prefHeight="29.0" prefWidth="288.0">
+                                                   <children>
+                                                      <Label text="Qual técnica utilizar?">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="113.0" prefWidth="286.0">
+                                                   <children>
+                                                      <RadioButton fx:id="radioCruz" mnemonicParsing="false" text="Vizinhança em cruz">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="groupRadio" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="radioX" mnemonicParsing="false" text="Vizinhança em X" toggleGroup="$groupRadio">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="radio3x3" mnemonicParsing="false" text="Vizinhança em 3x3" toggleGroup="$groupRadio">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </VBox>
+                                                <HBox>
+                                                   <children>
+                                                      <HBox>
+                                                         <children>
+                                                            <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#reducaoRuido" prefHeight="32.0" prefWidth="280.0" style="-fx-background-color: #990000;" text="Reduzir ruído" textFill="WHITE" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="painelCor1" expanded="false" text="Adição/Subtração">
+                                       <content>
+                                          <VBox>
+                                             <children>
+                                                <VBox prefHeight="62.0" prefWidth="288.0">
+                                                   <children>
+                                                      <Label text="\% Imagem 1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="txtPorcImg1" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="63.0" prefWidth="288.0">
+                                                   <children>
+                                                      <Label text="\% Imagem 2">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="txtPorcImg2" />
+                                                   </children>
+                                                </VBox>
+                                                <HBox prefWidth="224.0">
+                                                   <children>
+                                                      <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#subtracao" prefHeight="32.0" prefWidth="141.0" style="-fx-background-color: #e24141; -fx-text-fill: #fff;" text="Subtração" textFill="WHITE" />
+                                                      <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#adicao" prefHeight="32.0" prefWidth="145.0" style="-fx-background-color: #4c4242; -fx-text-fill: #fff;" text="Adição" textFill="WHITE" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Inverter verticalmente/horizontalmente">
+                                       <content>
+                                          <VBox prefHeight="174.0" prefWidth="308.0">
+                                             <children>
+                                                <VBox prefHeight="155.0" prefWidth="286.0">
+                                                   <children>
+                                                      <Label text="RODAR IMAGEM" />
+                                                      <Slider fx:id="sliderRotate" blockIncrement="25.0" majorTickUnit="90.0" max="360.0" prefHeight="73.0" prefWidth="286.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                                      <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#rotate" prefHeight="35.0" prefWidth="286.0" style="-fx-background-color: #259df9;" text="RODAR IMAGEM" textFill="WHITE" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="218.0" prefWidth="286.0">
+                                                   <children>
+                                                      <Label prefWidth="58.0" text="REFLETIR" />
+                                                      <Slider fx:id="sliderRefletir" blockIncrement="180.0" majorTickUnit="180.0" max="180.0" minorTickCount="0" prefHeight="52.0" prefWidth="286.0" showTickLabels="true" snapToTicks="true" />
+                                                      <HBox prefHeight="45.0" prefWidth="286.0">
+                                                         <children>
+                                                            <RadioButton fx:id="eixoX" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" selected="true" text="Eixo X" />
+                                                            <RadioButton fx:id="eixoY" mnemonicParsing="false" prefHeight="30.0" prefWidth="132.0" text="Eixo Y" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#refletir" prefHeight="35.0" prefWidth="286.0" style="-fx-background-color: #259df9;" text="REFLETIR" textFill="WHITE" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Moldura da imagem">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <CheckBox fx:id="molduraAtiva" mnemonicParsing="false" prefHeight="37.0" prefWidth="286.0" style="-fx-font-size: 16px;" text="Ativar uso de moldura" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="painelCor" expanded="false" text="Obter cor">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="176.0" text="*Funciona apenas na Imagem 1">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_LEFT" prefHeight="27.0" prefWidth="250.0" style="-fx-text-fill: #990000;" text="Clique com o mouse para capturar a posição">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <VBox prefHeight="62.0" prefWidth="288.0">
+                                                   <children>
+                                                      <Label text="Posição X (horizontal)">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="txtPosX" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="63.0" prefWidth="288.0">
+                                                   <children>
+                                                      <Label text="Posição Y (vertical)">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="txtPosY" />
+                                                   </children>
+                                                </VBox>
+                                                <HBox>
+                                                   <children>
+                                                      <HBox>
+                                                         <children>
+                                                            <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#mostraCorTela" prefHeight="32.0" prefWidth="283.0" style="-fx-background-color: #2df3d9; -fx-text-fill: #000;" text="Obter cor" textFill="WHITE" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Dividir/Inverter">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="Inverter primeiro" />
+                                                <Slider fx:id="sliderQuad1" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" min="1.0" minorTickCount="0" prefHeight="111.0" prefWidth="286.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                                <Label text="Inverter também" />
+                                                <Slider fx:id="sliderQuad2" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" min="1.0" minorTickCount="0" prefHeight="82.0" prefWidth="286.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#dividirQuadrantes" prefHeight="33.0" prefWidth="286.0" style="-fx-background-color: #5460ea;" text="Inverter quadrantes" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Segmentação">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#segmentacao" prefHeight="54.0" prefWidth="288.0" style="-fx-background-color: #5460ea;" text="SEGMENTAÇÃO" textFill="WHITE" />
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#segmentacaoPorHistograma" prefHeight="54.0" prefWidth="288.0" style="-fx-background-color: #af52c4;" text="SEGMENTAÇÃO POR HISTOGRAMA" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Equaliza Histograma">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#equalizaHistograma" prefHeight="54.0" prefWidth="288.0" style="-fx-background-color: #5460ea;" text="EQUALIZAR" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Equaliza Histograma diagonal principal">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#equalizaHistogramaDiagonal" prefHeight="54.0" prefWidth="288.0" style="-fx-background-color: #5460ea;" text="EQUALIZAR" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Identificar segmentos em desenho">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#identificaSegmentos" prefHeight="54.0" prefWidth="288.0" style="-fx-background-color: #990000;" text="IDENTIFICAR" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Prova 1 - Q1 - Moldura">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="Tamanho da moldura (em pixels,  inteiro)" />
+                                                <TextField fx:id="txtMolduraPixels" promptText="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <Label text="Qual será a cor utilizada? (0-1)">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <HBox prefHeight="55.0" prefWidth="286.0">
+                                                   <children>
+                                                      <TextField fx:id="txtMolduraR" prefHeight="26.0" prefWidth="81.0" promptText="R">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="txtMolduraG" prefHeight="26.0" prefWidth="81.0" promptText="G">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" right="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="txtMolduraB" prefHeight="26.0" prefWidth="81.0" promptText="B">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#prova1Moldura" prefHeight="37.0" prefWidth="286.0" style="-fx-background-color: #990000;" text="APLICAR MOLDURA" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Prova 1 - Q2 - Divide horizontalmente">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#prova1DivideInverteTonsCinza" prefHeight="54.0" prefWidth="288.0" style="-fx-background-color: #990000;" text="DIVIDIR E APLICAR EFEITO" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="Prova 1 - Q3 - Identificar formas">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#prova1IdentificaFormas" prefHeight="54.0" prefWidth="288.0" style="-fx-background-color: #990000;" text="IDENTIFICAR FORMAS" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="OpenCV - Identificação de padrões">
+                                       <content>
+                                          <VBox>
+                                             <children>
+                                                <Label text="Qual classificador utilizar? (O que detectar?)" />
+                                                <ComboBox fx:id="classificadores" prefHeight="33.0" prefWidth="288.0" promptText="Selecione um classificador">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </ComboBox>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#detectPatterns" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: a82172;" text="IDENTIFICAR" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="OpenCV - Ferramentas">
+                                       <content>
+                                          <VBox>
+                                             <children>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#openCVTonsDeCinza" prefHeight="36.0" prefWidth="224.0" style="-fx-background-color: a82172;" text="TONS DE CINZA" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane expanded="false" text="OpenCV - Filtros">
+                                       <content>
+                                          <VBox>
+                                             <children>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#OpenCVremocaoRuido3x3" prefHeight="36.0" prefWidth="224.0" text="Ruído 3x3" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#canny" prefHeight="36.0" prefWidth="224.0" text="CANNY" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin></Button>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#prewitt" prefHeight="36.0" prefWidth="224.0" text="PREWITT" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin></Button>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#sobel" prefHeight="36.0" prefWidth="224.0" text="SOBEL" textFill="WHITE" />
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#erosao" prefHeight="36.0" prefWidth="224.0" text="EROSÃO" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin></Button>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#dilatacao" prefHeight="36.0" prefWidth="224.0" text="DILATAÇÃO" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin></Button>
+                                                <Button contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#laplace" prefHeight="36.0" prefWidth="224.0" text="LAPLACE" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin></Button>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </panes>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </Accordion>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+         </left>
+         <center>
+            <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+               <center>
+                  <HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="980.0" style="-fx-min-width: 100%;" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="980.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#histogram" prefHeight="32.0" prefWidth="970.0" text="HISTOGRAMA" />
+                                 </children>
+                              </HBox>
+                              <ScrollPane fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" style="-fx-background-color: #fff;" vbarPolicy="ALWAYS">
+                                 <content>
+                                    <VBox prefHeight="372.0" prefWidth="965.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="862.0">
+                                             <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="270.0" text="Imagem 1">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="270.0" text="Imagem 2">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="270.0" text="Resultado">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <ImageView fx:id="imageView1" fitHeight="282.0" fitWidth="270.0" onContextMenuRequested="#abreImagem1" onMouseClicked="#getPosition" onMouseMoved="#rasterImg" onMousePressed="#mousePressed" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                                                   <cursor>
+                                                      <Cursor fx:constant="CROSSHAIR" />
+                                                   </cursor>
+                                                </ImageView>
+                                                <ImageView fx:id="imageView2" fitHeight="282.0" fitWidth="270.0" onContextMenuRequested="#abreImagem2" onMouseClicked="#getPosition" onMouseMoved="#rasterImg" onMousePressed="#mousePressed" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                                                   <cursor>
+                                                      <Cursor fx:constant="CROSSHAIR" />
+                                                   </cursor>
+                                                </ImageView>
+                                                <ImageView fx:id="imageViewResultado" fitHeight="282.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                              <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="862.0" style="-fx-background-color: #71B1B6;">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#abreImagem1" prefHeight="39.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="CARREGAR FOTO 1" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#abreImagem2" prefHeight="39.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="CARREGAR FOTO 2" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#salvar" prefHeight="43.0" prefWidth="321.0" style="-fx-background-color: #ead954;" text="Salvar imagem">
+                                       <graphic>
+                                          <ImageView fitHeight="31.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../bin/imgs/cloud-computing.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </center>
+               <top>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-background-color: #fff;">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="244.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label fx:id="lblR" contentDisplay="CENTER" text="R" textFill="#e40f0f">
+                                             <font>
+                                                <Font name="System Bold" size="32.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="244.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label fx:id="lblG" contentDisplay="CENTER" text="G" textFill="#10e338">
+                                             <font>
+                                                <Font name="System Bold" size="32.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="244.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label fx:id="lblB" contentDisplay="CENTER" text="B" textFill="#125ee3">
+                                             <font>
+                                                <Font name="System Bold" size="32.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </top>
+            </BorderPane>
+         </center>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </BorderPane>
+   </left>
+   <top>
+      <HBox alignment="CENTER" style="-fx-background-color: #2E2E2E;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Processamento Digital de Imagens" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>

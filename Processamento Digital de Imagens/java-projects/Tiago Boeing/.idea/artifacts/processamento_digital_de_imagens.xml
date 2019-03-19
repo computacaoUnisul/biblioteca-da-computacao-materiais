@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="processamento-digital-de-imagens">
+    <output-path>$PROJECT_DIR$/out/artifacts/processamento_digital_de_imagens</output-path>
+    <root id="archive" name="processamento-digital-de-imagens.jar">
+      <element id="library" level="project" name="opencv-400.jar" />
+      <element id="module-output" name="processamento-digital-de-imagens" />
+      <element id="library" level="application" name="opencv-400" />
+    </root>
+  </artifact>
+</component>

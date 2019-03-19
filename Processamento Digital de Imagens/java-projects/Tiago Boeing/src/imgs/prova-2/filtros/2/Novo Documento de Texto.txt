@@ -1,0 +1,4 @@
+1 = original => cinza ponderada = 43, 47, 10
+2 = original => segmentacao
+3 = img2 => sobel
+4 = original + img3 => subtracao 50, 50

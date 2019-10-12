@@ -6,6 +6,8 @@
 
 Materiais de Ciência da Computação
 
+Maintener: @tiagoboeing
+
 > Utilize os materiais apenas para finalidade estudantil!
 
 - [Repositórios sugeridos](#reposit%C3%B3rios-sugeridos)

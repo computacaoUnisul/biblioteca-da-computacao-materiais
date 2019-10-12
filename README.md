@@ -6,7 +6,7 @@
 
 Materiais de Ciência da Computação
 
-Maintener: @tiagoboeing
+- Maintener: [@tiagoboeing](https://github.com/tiagoboeing)
 
 > Utilize os materiais apenas para finalidade estudantil!
 

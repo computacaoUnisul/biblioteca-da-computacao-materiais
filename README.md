@@ -43,7 +43,7 @@ Algo ajudou? Deixa uma estrela no repositório.
 
 # Guia de contribuição
 
-Utilize [esta issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/1) para contribuir de forma simplificada, caso não tenha experiência com ferramentas Git ou faça um fork e devolva as alterações abrindo uma MR (merge request).
+Utilize [esta issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/1) para contribuir de forma simplificada, caso não tenha experiência com ferramentas Git ou faça um fork e devolva as alterações. Abra uma PR (pull request).
 
 ## Dúvida sobre material
 

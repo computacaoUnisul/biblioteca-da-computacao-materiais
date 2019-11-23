@@ -41,12 +41,6 @@ Algo ajudou? Deixa uma estrela no repositório.
 
 ----
 
-# Biblioteca dos Cursos
-
-Uma plataforma em desenvolvimento por acadêmicos de Ciência da Computação e visa oferecer uma forma mais ágil e intuitiva no arquivamento de materiais utilizados ao longo da vida acadêmica.
-
-Atualmente há uma grande quantidade de informações geradas diariamente ao longo da formação de acadêmicos, porém grande parte delas não está sendo aproveitada de forma correta. A plataforma estará disponível para professores e acadêmicos.
-
 # Guia de contribuição
 
 Utilize [esta issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/1) para contribuir de forma simplificada, caso não tenha experiência com ferramentas Git ou faça um fork e devolva as alterações abrindo uma MR (merge request).

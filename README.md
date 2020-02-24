@@ -60,6 +60,6 @@ Dúvida:
 > Abra uma issue apenas 😁
 
 
-## Insenção de responsabilidade
+## Isenção de responsabilidade
 
-O maintainer ou contribuintes do projeto não assumem qualquer responsabilidade sobre a precisão, integralidade ou qualidade das informações fornecidas, bem como sua utilização. Os materiais possuem finalidade apenas didática.
+Ao utilizar ou enviar qualquer material você afirma ser dono ou possuir permissão para utilização e/ou compartilhamento do mesmo. Todo conteúdo disponível neste repositório possui finalidade totalmente didática e os mantenedores não poderão ser responsabilizados quanto a utilização incorreta.

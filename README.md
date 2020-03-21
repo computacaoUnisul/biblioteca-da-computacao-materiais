@@ -7,6 +7,7 @@
 Materiais de Ciência da Computação
 
 - Maintainer: [@tiagoboeing](https://github.com/tiagoboeing)
+- Quero ser! Abra uma issue.
 
 > Utilize os materiais apenas para finalidade estudantil!
 

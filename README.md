@@ -11,11 +11,9 @@ Materiais de Ciência da Computação
 
 > Utilize os materiais apenas para finalidade estudantil!
 
-- [Repositórios sugeridos](#reposit%c3%b3rios-sugeridos)
-- [Guia de contribuição](#guia-de-contribui%c3%a7%c3%a3o)
-  - [Dúvida sobre material](#d%c3%bavida-sobre-material)
-  - [Solicitar conteúdo](#solicitar-conte%c3%bado)
-  - [Isenção de responsabilidade](#isen%c3%a7%c3%a3o-de-responsabilidade)
+- [Repositórios sugeridos](#repositórios-sugeridos)
+  - [Quero contribuir](#quero-contribuir)
+  - [Isenção de responsabilidade](#isenção-de-responsabilidade)
 
 Algo ajudou? Deixa uma estrela no repositório.
 
@@ -44,24 +42,17 @@ Algo ajudou? Deixa uma estrela no repositório.
 
 ----
 
-# Guia de contribuição
+## Quero contribuir
 
-Utilize [esta issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/1) para contribuir de forma simplificada, caso não tenha experiência com ferramentas Git ou faça um fork e devolva as alterações. Abra uma PR (pull request).
-
-## Dúvida sobre material
-
-Abra uma issue com o seguinte corpo da mensagem:
+[Abra uma issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/new) e informe:
 
 ```
-Link do material: 
-----
-Dúvida:
+- Professor:
+- Matéria:
+- Semestre:
+
+"*não esqueça de anexar os arquivos
 ```
-
-## Solicitar conteúdo
-
-> Abra uma issue apenas 😁
-
 
 ## Isenção de responsabilidade
 

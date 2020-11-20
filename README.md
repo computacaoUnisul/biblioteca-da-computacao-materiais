@@ -51,7 +51,7 @@ Algo ajudou? Deixa uma estrela no repositório.
 - Matéria:
 - Semestre:
 
-"*não esqueça de anexar os arquivos
+*não esqueça de anexar os arquivos
 ```
 
 ## Isenção de responsabilidade

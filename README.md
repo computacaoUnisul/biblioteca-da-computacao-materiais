@@ -44,15 +44,7 @@ Algo ajudou? Deixa uma estrela no repositório.
 
 ## Quero contribuir
 
-[Abra uma issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/new) e informe:
-
-```
-- Professor:
-- Matéria:
-- Semestre:
-
-*não esqueça de anexar os arquivos
-```
+[Abra uma issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/new/choose) do tipo `Catalogar material` e preencha a template.
 
 ## Isenção de responsabilidade
 

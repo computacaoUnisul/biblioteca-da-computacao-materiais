@@ -1,0 +1,20 @@
+ Morbidade Hospitalar do SUS - por local de residência - Santa Catarina
+Internações por Município e Faixa Etária 1
+Município: 420150 Armazém, 420460 Criciúma, 420540 Florianópolis, 420620 Gravatal, 421870 Tubarão
+Sexo: Fem
+Cor/raça: Branca
+Período:Abr/2019-Abr/2020
+"Município";"Menor 1 ano";"1 a 4 anos";"5 a 9 anos";"10 a 14 anos";"15 a 19 anos";"20 a 29 anos";"30 a 39 anos";"40 a 49 anos";"50 a 59 anos";"60 a 69 anos";"70 a 79 anos";"80 anos e mais";"Total"
+"420150 Armazém";12;10;6;5;19;88;91;56;75;59;74;48;543
+"420460 Criciúma";217;117;115;101;378;1187;941;554;790;762;515;422;6099
+"420540 Florianópolis";460;382;269;298;642;2909;2578;1349;1195;1292;892;806;13072
+"420620 Gravatal";11;7;3;1;28;97;69;55;59;74;43;57;504
+"421870 Tubarão";99;85;73;68;181;716;684;400;527;564;355;299;4051
+"Total";799;601;466;473;1248;4997;4363;2414;2646;2751;1879;1632;24269
+ Fonte: Ministério da Saúde - Sistema de Informações Hospitalares do SUS (SIH/SUS)
+ Notas:
+ 
+ Situação da base de dados nacional em 29/04/2016.
+ Dados de janeiro de 2015 até março de 2016 sujeitos a retificação.
+ 
+ Consulte o site da Secretaria Estadual de Saúde para mais informações.

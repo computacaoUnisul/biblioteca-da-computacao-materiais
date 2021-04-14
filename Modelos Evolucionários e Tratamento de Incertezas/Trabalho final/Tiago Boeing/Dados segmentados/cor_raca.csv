@@ -1,0 +1,18 @@
+ Morbidade Hospitalar do SUS - por local de residência - Santa Catarina
+Internações por Município e Cor/raça
+Município: 420150 Armazém, 420460 Criciúma, 420540 Florianópolis, 420620 Gravatal, 421870 Tubarão
+Período:Abr/2019-Abr/2020
+"Município";"Branca";"Preta";"Parda";"Amarela";"Indígena";"Sem informação";"Total"
+"420150 Armazém";1000;13;11;5;-;38;1067
+"420460 Criciúma";10908;906;487;26;-;209;12536
+"420540 Florianópolis";23545;1982;1875;164;11;329;27906
+"420620 Gravatal";924;53;9;1;-;55;1042
+"421870 Tubarão";7603;496;77;9;-;216;8401
+"Total";43980;3450;2459;205;11;847;50952
+ Fonte: Ministério da Saúde - Sistema de Informações Hospitalares do SUS (SIH/SUS)
+ Notas:
+ 
+ Situação da base de dados nacional em 29/04/2016.
+ Dados de janeiro de 2015 até março de 2016 sujeitos a retificação.
+ 
+ Consulte o site da Secretaria Estadual de Saúde para mais informações.

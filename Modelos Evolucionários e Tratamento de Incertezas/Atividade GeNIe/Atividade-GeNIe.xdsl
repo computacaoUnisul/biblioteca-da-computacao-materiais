@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Gato">
+			<state id="V" />
+			<state id="F" />
+			<probabilities>0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Arranhoes">
+			<state id="V" />
+			<state id="F" />
+			<parents>Gato</parents>
+			<probabilities>0.95 0.05 0.15 0.85</probabilities>
+		</cpt>
+		<cpt id="Alergia">
+			<state id="V" />
+			<state id="F" />
+			<probabilities>0.45 0.55</probabilities>
+		</cpt>
+		<cpt id="Rinite">
+			<state id="V" />
+			<state id="F" />
+			<parents>Gato Alergia</parents>
+			<probabilities>0.99 0.01 0.15 0.85 0.1 0.9 0.005 0.995</probabilities>
+		</cpt>
+		<cpt id="Resfriado">
+			<state id="V" />
+			<state id="F" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Espirro">
+			<state id="V" />
+			<state id="F" />
+			<parents>Resfriado Rinite</parents>
+			<probabilities>0.99 0.01 0.9 0.1 0.85 0.15 0.01 0.99</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.5.5224.0 ACADEMIC" name="Network1">
+			<node id="Gato">
+				<name>Gato</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>215 95 263 125</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Alergia">
+				<name>Alergia</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>388 143 436 173</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Espirro">
+				<name>Espirro</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>252 400 303 431</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Resfriado">
+				<name>Resfriado</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>100 279 161 317</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Arranhoes">
+				<name>Arranhoes</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>103 181 169 222</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Rinite">
+				<name>Rinite</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>361 262 406 290</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

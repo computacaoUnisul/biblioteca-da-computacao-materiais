@@ -44,7 +44,8 @@ Algo ajudou? Deixa uma estrela no repositório.
 
 ## Quero contribuir
 
-[Abra uma issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/new/choose) do tipo `Catalogar material` e preencha a template.
+- [Abra uma issue](https://github.com/computacaoUnisul/biblioteca-da-computacao-materiais/issues/new/choose) do tipo `Catalogar material` e preencha a template; ou
+- Faça fork do repositório e devolva as alterações por meio de uma Pull request (PR).
 
 ## Isenção de responsabilidade
 
